@@ -1,5 +1,7 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <h1>欢迎来到小米商城</h1>
+  </div>
 </template>
 
 <script>
