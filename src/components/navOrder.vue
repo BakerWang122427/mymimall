@@ -1,11 +1,11 @@
 <template>
   <div>
-    index-content
+    navOrder
   </div>
 </template>
 
 <script>
 export default {
-  name: "index"
+  name: "navorder"
 };
 </script>
