@@ -21,7 +21,7 @@ axios.interceptors.response.use(function(response) {
     // 返回状态码为10  为需要登录 所以统一跳转到登录页面
     window.location.href == "./#/login"; // 改处是无法使用vue路由的 所以只能使用href
   } else {
-    console.log(res.msg);
+    //console.log(res.msg);
   }
 });
 

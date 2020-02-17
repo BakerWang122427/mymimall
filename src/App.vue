@@ -13,11 +13,13 @@ export default {
     return {};
   },
   mounted() {
-    //storage.setItem("a", 1);
+    storage.setItem("a", 1);
     //storage.setItem("user", { a: 1 });
-    storage.setItem("userName", "Baker", "user");
+    //storage.setItem("userName", "Baker", "user");
   }
 };
 </script>
 
-<style></style>
+<style>
+@import "./assets/scss/reset.scss";
+</style>
