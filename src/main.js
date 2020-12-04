@@ -5,10 +5,21 @@ import axios from "axios";
 import VueAxios from "vue-axios"; //该插件便于axios的使用；即把axios挂载到vue的实例对象中去；this.axios.get() ……
 
 import App from "./App.vue";
+
+//mockjs 开关
+const mock = true;
+if (mock) {
+  require("./mock/mockApi"); //requier方式引入不会进行预加载，真正需要时候才会导入对应模块
+}
+
 Vue.use(VueAxios, axios);
 //接口请求拦截
 //baseURL 如何设定 得根据前端的跨域方式来做处理  /a/b: /api/a/b ==> /a/b
-axios.defaults.baseURL = "./api";
+//easy-mock方式
+// axios.defaults.baseURL =
+//   "https://www.easy-mock.com/mock/5fca0b38584b91646b4cfcf9/mimallapi";
+
+//axios.defaults.baseURL = "./api"; //代理方式；如果是jasonp方式或者CORS跨域就得写：http//www.***.com/……
 //请求超时 设置  一般为 5-8 秒 较为合适
 axios.defaults.timeout = 8000;
 //接口错误拦截统一处理，同理可统一处理对返回信息进行统一处理 因为所有后端返回信息都会走response
@@ -19,7 +30,7 @@ axios.interceptors.response.use(function(response) {
     return res.data;
   } else if (res.status == 10) {
     // 返回状态码为10  为需要登录 所以统一跳转到登录页面
-    window.location.href == "./#/login"; // 改处是无法使用vue路由的 所以只能使用href
+    window.location.href == "./#/login"; // 此处是无法使用vue路由的 所以只能使用href
   } else {
     //console.log(res.msg);
   }

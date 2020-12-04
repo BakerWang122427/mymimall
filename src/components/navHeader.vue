@@ -10,9 +10,7 @@
       <div class="nav-topbar-right">
         <a href>UserName</a>
         <a href>我的订单</a>
-        <a href class="my-cart">
-          <i class="icon-cart"></i>购物车(88)
-        </a>
+        <a href class="my-cart"> <i class="icon-cart"></i>购物车(88) </a>
       </div>
     </div>
     <div class="nav-header">
@@ -20,7 +18,9 @@
         <div class="header-logo">
           <div class="logo-wrapper">
             <a href>
-              <img src="https://i01.appmifile.com/webfile/globalimg/pandora/mihome.png" />
+              <img
+                src="https://i01.appmifile.com/webfile/globalimg/pandora/mihome.png"
+              />
             </a>
           </div>
         </div>
@@ -135,6 +135,7 @@ export default {
           }
           &:hover {
             color: #ff670a;
+            cursor: pointer;
           }
         }
       }

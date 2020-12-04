@@ -39,6 +39,6 @@ export default {
     } else {
       delete val[key];
     }
-    window.sessionStorage.setItem(STORAGE_KEY, val);
+    window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(val)); //将修改后的json转为字符串重新赋值给sessionStorage
   }
 };
